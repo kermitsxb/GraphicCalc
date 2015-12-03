@@ -83,17 +83,20 @@ public class Gui extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculatrice Graphique");
 
-        jLabel1.setText("Entrez votre expression");
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        jLabel1.setText("Entrez votre expression (Calcul ou fonction à afficher)");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        btn_ret.setText("RET");
+        btn_ret.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btn_ret.setText("R");
         btn_ret.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_retActionPerformed(evt);
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton2.setText("2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +104,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton3.setText("3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +112,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton4.setText("4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +120,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +128,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +136,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton7.setText("7");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +144,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton8.setText("8");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +152,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton9.setText("9");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +160,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_div.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_div.setText("/");
         btn_div.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +168,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +176,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_ce.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_ce.setText("CE");
         btn_ce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +184,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_c.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_c.setText("C");
         btn_c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +192,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton0.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton0.setText("0");
         jButton0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +200,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_moins.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_moins.setText("-");
         btn_moins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,6 +208,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_cos.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_cos.setText("cos");
         btn_cos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +216,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_plus.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_plus.setText("+");
         btn_plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +224,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        btn_equal.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        btn_equal.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_equal.setText("=");
         btn_equal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,13 +232,15 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        btn_mul.setText("X");
+        btn_mul.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btn_mul.setText("*");
         btn_mul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_mulActionPerformed(evt);
             }
         });
 
+        btn_sin.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_sin.setText("sin");
         btn_sin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +248,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_tan.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_tan.setText("tan");
         btn_tan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,6 +256,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_pOpen.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_pOpen.setText("(");
         btn_pOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,6 +264,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_pClose.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_pClose.setText(")");
         btn_pClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,7 +333,7 @@ public class Gui extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_ret, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_ce, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,18 +389,20 @@ public class Gui extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(5, 5, 5)
                 .addComponent(txt_expression, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jLabel2.setText("POO2 - Calculatrice Graphique - 2015");
 
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jLabel3.setText("Anthony Den Drijver - Thomas Stocker");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -386,19 +411,18 @@ public class Gui extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -412,7 +436,7 @@ public class Gui extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
