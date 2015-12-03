@@ -12,7 +12,11 @@ package graphiccalc;
 public class CONST extends EXPR {
     protected double value;
     
-    public CONST(int value) {
+    /**
+     *
+     * @param value : La valeur chiffrée de la "constante"
+     */
+    public CONST(double value) {
         this.value = value;
     }
     

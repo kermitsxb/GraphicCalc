@@ -14,7 +14,7 @@ public class Parser {
     public static String str;
     public static int cur;
     public static char last_char;
-    public static char[] authorized_char = new char[]{'+', '-', '*', '/','(',')'};
+    public static char[] authorized_char = new char[]{'+', '-', '*', '/','(',')','.'};
 
     public static void init() {
         str = "";
@@ -133,14 +133,18 @@ public class Parser {
                     return result;
                 }
             }
-        } else {
-            while (read_int()) {
+        }
+        else if (read_char('x')) {
+            
+        }
+        else {
+            while (read_double()) {
                 op = last_char;
                 number_str += op;
 
             }
             if (number_str.compareTo("") != 0) {
-                result = new CONST(Integer.parseInt(number_str));
+                result = new CONST(Double.parseDouble(number_str));
             }
         }
 
@@ -167,6 +171,28 @@ public class Parser {
             }
         }
 
+        return false;
+    }
+    
+    public static boolean read_double() {        
+        if (cur < str.length()) {
+            char c = str.charAt(cur);
+                       
+            if (Character.isDigit(c) || c == '.') {
+                last_char = str.charAt(cur);
+                cur++;
+                return true;
+            } else {
+                if (charInArray(c, authorized_char) && !(cur == str.length() - 1)) {
+                    return false;
+                }
+                else {
+                    if (c != ')')
+                        show_error();
+                }
+            }
+        }
+        
         return false;
     }
     
