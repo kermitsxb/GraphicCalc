@@ -11,7 +11,10 @@ package graphiccalc;
  */
 public abstract class EXPR {
     
-    
-    abstract double eval();
+    /**
+     *
+     * @return double : Le résultat de l'expression parsée
+     */
+    public abstract double eval();
     
 }

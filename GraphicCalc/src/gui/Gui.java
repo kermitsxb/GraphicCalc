@@ -1,13 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gui;
+
+import graphiccalc.EXPR;
+import graphiccalc.Parser;
 
 /**
  *
- * @author Tony
+ * @author Anthony Den Drijver - Thomas Stocker
  */
 public class Gui extends javax.swing.JFrame {
 
@@ -128,6 +126,11 @@ public class Gui extends javax.swing.JFrame {
         btn_plus.setText("+");
 
         btn_equal.setText("=");
+        btn_equal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_equalActionPerformed(evt);
+            }
+        });
 
         btn_mul.setText("X");
 
@@ -258,7 +261,7 @@ public class Gui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel2.setText("POO2 - Calculatrice Graphique");
+        jLabel2.setText("POO2 - Calculatrice Graphique - 2015");
 
         jLabel3.setText("Anthony Den Drijver - Thomas Stocker");
 
@@ -316,6 +319,15 @@ public class Gui extends javax.swing.JFrame {
     private void btn_retActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_retActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_retActionPerformed
+
+    private void btn_equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_equalActionPerformed
+        String expr = txt_expression.getText();
+        
+        Parser.str = expr;
+        EXPR e = Parser.read_e();
+        
+        txt_expression.setText( String.valueOf(e.eval()) );
+    }//GEN-LAST:event_btn_equalActionPerformed
 
     /**
      * @param args the command line arguments
