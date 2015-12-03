@@ -7,7 +7,7 @@ package graphiccalc;
 
 /**
  *
- * @author Thomas STOCKER
+ * @author Thomas STOCKER - Anthony Den Drijver
  */
 public class Parser {
 
@@ -135,7 +135,8 @@ public class Parser {
             }
         }
         else if (read_char('x')) {
-            
+            // -- C'est une variable
+            result = new VAR('x');
         }
         else {
             while (read_double()) {

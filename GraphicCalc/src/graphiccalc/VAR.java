@@ -7,13 +7,19 @@ package graphiccalc;
 
 /**
  *
- * @author kermit
+ * @author Anthony Den Drijver - Thomas Stocker
  */
 public class VAR extends CONST{
     protected char var;
     
-    public VAR(char var, int value) {
-        super(value);
+    public VAR(char var) {
+        super(0);
         this.var = var;
     }
+    
+    @Override
+    public double eval() {
+        return 0;
+    }
+    
 }
