@@ -10,14 +10,14 @@ package tp3;
  * @author Thomas STOCKER
  */
 public class CONST extends EXPR {
-    protected int value;
+    protected double value;
     
     public CONST(int value) {
         this.value = value;
     }
     
     @Override
-    public int eval() {
+    public double eval() {
         return value;
     }
 }

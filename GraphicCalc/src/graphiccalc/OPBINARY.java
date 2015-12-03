@@ -15,7 +15,7 @@ public class OPBINARY extends EXPR{
     protected EXPR right;
     
     @Override
-    public int eval() {
+    public double eval() {
         return 0;
     }
 }

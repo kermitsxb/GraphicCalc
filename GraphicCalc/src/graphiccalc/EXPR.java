@@ -12,6 +12,6 @@ package tp3;
 public abstract class EXPR {
     
     
-    abstract int eval();
+    abstract double eval();
     
 }

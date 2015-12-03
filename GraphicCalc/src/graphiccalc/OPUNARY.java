@@ -13,7 +13,7 @@ public class OPUNARY extends EXPR{
     protected EXPR right;
     
     @Override
-    public int eval() {
+    public double eval() {
         return 0;
     }
 }
