@@ -7,7 +7,7 @@ package graphiccalc;
 
 /**
  *
- * @author kermit
+ * @author Thomas Stocker - Anthony Den Drijver
  */
 public class GraphicCalc {
 

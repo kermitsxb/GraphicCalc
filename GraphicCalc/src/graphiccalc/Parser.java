@@ -16,6 +16,12 @@ public class Parser {
     public static char last_char;
     public static char[] authorized_char = new char[]{'+', '-', '*', '/','(',')'};
 
+    public static void init() {
+        str = "";
+        last_char = '\u0000';
+        cur = 0;
+    }
+    
     public static boolean read_char(char c) {
         if (cur < str.length() && (str.charAt(cur) == c)) {
             last_char = c;

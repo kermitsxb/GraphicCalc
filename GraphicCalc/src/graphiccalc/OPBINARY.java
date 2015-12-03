@@ -7,7 +7,7 @@ package graphiccalc;
 
 /**
  *
- * @author Thomas STOCKER
+ * @author Thomas STOCKER - Anthony Den Drijver
  */
 public class OPBINARY extends EXPR{
  
