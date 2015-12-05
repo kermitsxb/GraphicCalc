@@ -12,8 +12,8 @@ public class Parser {
     public static int cur;
     public static char last_char;
     public static String fnc;
-    public static char[] authorized_char = new char[]{'+', '-', '*', '/','(',')','.'};
-    public static String[] authorized_func = new String[]{"sin", "cos", "tan"};
+    public static char[] authorized_char = new char[]{'+', '-', '*', '/', '(', ')', '.', 'x', 'π'};
+    public static String[] authorized_func = new String[]{"sin", "cos", "tan", "log", "ln"};
     
     /**
     * Réinitialise les données du parser
@@ -61,12 +61,10 @@ public class Parser {
                 if (f.equals(extract)) {
                     cur += size;
                     fnc = extract;
-                    System.out.println("return true");
                     return true;
                 }
             }
         }
-        System.out.println("Return false");
         return false;
     }
 
@@ -177,6 +175,12 @@ public class Parser {
                     case "tan" :
                         result = new TAN(result);
                         break;
+                    case "log" :
+                        result = new LOG(result);
+                        break;
+                    case "ln" :
+                        result = new LN(result);
+                        break;
                     default :
                         result = null;
                 }
@@ -213,7 +217,10 @@ public class Parser {
         }
         else if (read_char('x')) {
             // -- C'est une variable
-            result = new VAR('x');
+            result = new VAR();
+        }
+        else if (read_char('π')) {
+            result = new PI();
         }
         else {
             while (read_double()) {
