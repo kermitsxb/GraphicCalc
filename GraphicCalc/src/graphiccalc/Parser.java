@@ -1,12 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package graphiccalc;
 
+import java.util.Arrays;
+
 /**
- *
+ * Classe Parser pour le traitement d'une expression arithmétique
  * @author Thomas STOCKER - Anthony Den Drijver
  */
 public class Parser {
@@ -14,14 +11,26 @@ public class Parser {
     public static String str;
     public static int cur;
     public static char last_char;
+    public static String fnc;
     public static char[] authorized_char = new char[]{'+', '-', '*', '/','(',')','.'};
-
+    public static String[] authorized_func = new String[]{"sin", "cos", "tan"};
+    
+    /**
+    * Réinitialise les données du parser
+    */
     public static void init() {
         str = "";
+        fnc = "";
         last_char = '\u0000';
         cur = 0;
     }
     
+    /**
+    * Lit un caractère de str, et avance de une position dans la chaine en renvoyant vrai si ce caractère
+    * match avec celui passé en paramètre
+    * @param c : Le char à matcher
+    * @return boolean : Le caractère lu était le caractère passé en paramètre
+    */
     public static boolean read_char(char c) {
         if (cur < str.length() && (str.charAt(cur) == c)) {
             last_char = c;
@@ -31,7 +40,40 @@ public class Parser {
 
         return false;
     }
+    
+    /**
+     * Vérifie si l'expression contient l'une des fonctions arithmétique supportée,
+     * et la traite le cas échéant
+     * @return boolean : Une fonction à été matchée
+     */
+    public static boolean read_func() {
+        String f;
+        int arr_size = authorized_func.length;
+        
+        for (int i = 0; i < arr_size; i++) {
+            f = authorized_func[i];
+            int size = f.length();
 
+            if ((cur + size) < str.length()) {
+                String extract = str.substring(cur, cur + size);
+
+                // ** La fonction lue fait partie des fonctions supportées
+                if (f.equals(extract)) {
+                    cur += size;
+                    fnc = extract;
+                    System.out.println("return true");
+                    return true;
+                }
+            }
+        }
+        System.out.println("Return false");
+        return false;
+    }
+
+    /**
+     * 
+     * @return 
+     */
     public static EXPR read_e() {
         if (!test_Expr(str)) {
             cur = str.length() - 1;
@@ -65,6 +107,10 @@ public class Parser {
         return result;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public static EXPR read_e_m() {
         EXPR result;
         EXPR right;
@@ -93,8 +139,12 @@ public class Parser {
         return result;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public static EXPR read_e_u() {
-        EXPR result;
+        EXPR result = null;
         char op;
 
         if (read_char('-') || read_char('+')) {
@@ -111,13 +161,40 @@ public class Parser {
                 show_error();
             }
 
-        } else {
+        } 
+        else if (read_func()) {
+            
+            result = read_e_u();
+            if (result != null) {
+                
+                switch (fnc) {
+                    case "sin" :
+                        result = new SIN(result);
+                        break;
+                    case "cos" :
+                        result = new COS(result);
+                        break;
+                    case "tan" :
+                        result = new TAN(result);
+                        break;
+                    default :
+                        result = null;
+                }
+            } else {
+                show_error();
+            }
+        }
+        else {
             result = read_cst();
         }
 
         return result;
     }
 
+    /**
+     * 
+     * @return EXPR : Objet CONST
+     */
     public static EXPR read_cst() {
         EXPR result = null;
         char op;
@@ -152,6 +229,10 @@ public class Parser {
         return result;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public static boolean read_int() {
 
         if (cur < str.length()) {
@@ -175,6 +256,10 @@ public class Parser {
         return false;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public static boolean read_double() {        
         if (cur < str.length()) {
             char c = str.charAt(cur);
@@ -197,6 +282,11 @@ public class Parser {
         return false;
     }
     
+    /**
+     * 
+     * @param exp
+     * @return 
+     */
     public static boolean test_Expr(String exp) {
         char c = exp.charAt(exp.length() - 1);
         
@@ -207,6 +297,12 @@ public class Parser {
         return false;
     }
     
+    /**
+     * 
+     * @param c
+     * @param arr
+     * @return 
+     */
     public static boolean charInArray(char c, char[] arr) {
         boolean test = false;
         
@@ -217,6 +313,9 @@ public class Parser {
         return test;
     }
 
+    /**
+     * Affichage en cas d'erreur avec la position n'ayant pas été reconnue par le Parser
+     */
     public static void show_error() {
         int i;
         System.err.println(str);

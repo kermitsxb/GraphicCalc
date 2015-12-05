@@ -7,7 +7,7 @@ package graphiccalc;
 
 /**
  *
- * @author kermit
+ * @author Anthony Den Drijver - Thomas Stocker
  */
 public class TAN extends OPUNARY{
     public TAN (EXPR right) {
