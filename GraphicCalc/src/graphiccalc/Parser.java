@@ -12,7 +12,7 @@ public class Parser {
     public static int cur;
     public static char last_char;
     public static String fnc;
-    public static char[] authorized_char = new char[]{'+', '-', '*', '/', '(', ')', '.', 'x', 'π'};
+    public static char[] authorized_char = new char[]{'+', '-', '*', '/', '(', ')', '.', 'x', 'π', '^'};
     public static String[] authorized_func = new String[]{"sin", "cos", "tan", "log", "ln"};
     
     /**
@@ -113,15 +113,14 @@ public class Parser {
         EXPR result;
         EXPR right;
         char op;
-        result = read_e_u();
+        result = read_e_e();
 
         if (result != null) {
             while (read_char('*') || read_char('/')) {
                 op = last_char;
-                right = read_e_m();
+                right = read_e_e();
 
                 if (right == null) {
-                    // -- Gérer l'erreur
                     show_error();
                     result = null;
                 }
@@ -136,13 +135,36 @@ public class Parser {
 
         return result;
     }
+    
+    public static EXPR read_e_e() {
+        EXPR result;
+        EXPR right;
+        char op;
+        result = read_e_u();
+
+        if (result != null) {
+            while (read_char('^')) {
+                op = last_char;
+                right = read_e_u();
+
+                if (right == null) {
+                    show_error();
+                    result = null;
+                }
+
+                result = new EXP(result, right);
+            }
+        }
+
+        return result;
+    }
 
     /**
      * 
      * @return 
      */
     public static EXPR read_e_u() {
-        EXPR result = null;
+        EXPR result;
         char op;
 
         if (read_char('-') || read_char('+')) {
@@ -235,33 +257,6 @@ public class Parser {
 
         return result;
     }
-
-    /**
-     * 
-     * @return 
-     */
-    public static boolean read_int() {
-
-        if (cur < str.length()) {
-            char c = str.charAt(cur);
-                       
-            if (Character.isDigit(c)) {
-                last_char = str.charAt(cur);
-                cur++;
-                return true;
-            } else {
-                if (charInArray(c, authorized_char) && !(cur == str.length() - 1)) {
-                    return false;
-                }
-                else {
-                    if (c != ')')
-                        show_error();
-                }
-            }
-        }
-
-        return false;
-    }
     
     /**
      * 
@@ -297,11 +292,7 @@ public class Parser {
     public static boolean test_Expr(String exp) {
         char c = exp.charAt(exp.length() - 1);
         
-        if (Character.isDigit(c) || charInArray(c, authorized_char)) {
-            return true;
-        }
-        
-        return false;
+        return Character.isDigit(c) || charInArray(c, authorized_char);
     }
     
     /**

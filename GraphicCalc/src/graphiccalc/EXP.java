@@ -9,14 +9,16 @@ package graphiccalc;
  *
  * @author Anthony Den Drijver - Thomas Stocker
  */
-public class LN extends OPUNARY {
-    public LN(EXPR right) {
+public class EXP extends OPBINARY {
+    
+    public EXP(EXPR left, EXPR right) {
+        this.left = left;
         this.right = right;
     }
     
     @Override
     public double eval() {
-        return Math.round(Math.log(right.eval()));
+        return Math.pow(left.eval(), right.eval());
     }
     
 }

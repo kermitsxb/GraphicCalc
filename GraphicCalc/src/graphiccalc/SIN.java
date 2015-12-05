@@ -11,6 +11,6 @@ public class SIN extends OPUNARY{
     
     @Override
     public double eval() {
-        return Math.sin(right.eval());
+        return Math.round(Math.sin(right.eval()));
     }
 }
