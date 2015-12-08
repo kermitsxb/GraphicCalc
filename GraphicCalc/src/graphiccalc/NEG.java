@@ -20,4 +20,9 @@ public class NEG extends OPUNARY{
         return -right.eval();
     }
     
+    @Override
+    public double eval(double x) {
+        return -right.eval();
+    }
+    
 }

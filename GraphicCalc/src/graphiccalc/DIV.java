@@ -19,4 +19,9 @@ public class DIV extends OPBINARY {
     public double eval() {
         return left.eval() / right.eval();
     }
+    
+    @Override
+    public double eval(double x) {
+        return left.eval() / right.eval();
+    }
 }

@@ -19,4 +19,9 @@ public class LN extends OPUNARY {
         return Math.round(Math.log(right.eval()));
     }
     
+    @Override
+    public double eval(double x) {
+        return Math.round(Math.log(right.eval()));
+    }
+    
 }

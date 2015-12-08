@@ -20,4 +20,9 @@ public class PI extends CONST {
         return Math.PI;
     }
     
+    @Override
+    public double eval(double x) {
+        return Math.PI;
+    }
+    
 }

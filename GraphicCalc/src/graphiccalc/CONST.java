@@ -24,4 +24,9 @@ public class CONST extends EXPR {
     public double eval() {
         return value;
     }
+    
+    @Override
+    public double eval(double x) {
+        return value;
+    }
 }

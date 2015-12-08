@@ -17,4 +17,6 @@ public abstract class EXPR {
      */
     public abstract double eval();
     
+    public abstract double eval(double x);
+    
 }

@@ -18,4 +18,9 @@ public class OPBINARY extends EXPR{
     public double eval() {
         return 0;
     }
+    
+    @Override
+    public double eval(double x) {
+        return 0;
+    }
 }

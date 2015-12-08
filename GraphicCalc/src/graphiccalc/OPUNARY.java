@@ -16,4 +16,9 @@ public class OPUNARY extends EXPR{
     public double eval() {
         return 0;
     }
+    
+    @Override
+    public double eval(double x) {
+        return 0;
+    }
 }

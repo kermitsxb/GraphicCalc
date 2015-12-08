@@ -9,13 +9,14 @@ public class VAR extends CONST{
         super(0);
     }
     
-    public void setValue(double d) {
-        this.value = d;
-    }
     
     @Override
     public double eval() {
         return this.value;
     }
     
+    @Override
+    public double eval(double x) {
+        return x;
+    }
 }

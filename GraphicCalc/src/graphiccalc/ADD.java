@@ -21,4 +21,9 @@ public class ADD extends OPBINARY {
         return left.eval() + right.eval();
     }
     
+    @Override
+    public double eval(double x) {
+        return left.eval() + right.eval();
+    }
+    
 }
