@@ -6,6 +6,9 @@
 package gui;
 
 import graphiccalc.EXPR;
+import draw.StdDraw;
+import graphiccalc.Parser;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -13,6 +16,7 @@ import graphiccalc.EXPR;
  */
 public class GuiGraph extends javax.swing.JFrame {
 
+    private EXPR m_e;
     /**
      * Creates new form Graph
      */
@@ -22,6 +26,7 @@ public class GuiGraph extends javax.swing.JFrame {
     
     public GuiGraph(EXPR e) {
         initComponents();
+        m_e = e;
     }
 
     /**
@@ -36,7 +41,7 @@ public class GuiGraph extends javax.swing.JFrame {
         jPanelControls = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTxtXMin = new javax.swing.JTextField();
-        jTxtXMin1 = new javax.swing.JTextField();
+        jTxtXMax = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTxtYMin = new javax.swing.JTextField();
@@ -54,11 +59,19 @@ public class GuiGraph extends javax.swing.JFrame {
 
         jLabel2.setText("X minimum");
 
+        jTxtXMin.setText("-3.0");
+
+        jTxtXMax.setText("3.0");
+
         jLabel3.setText("X maximum");
 
         jLabel4.setText("Y minimum");
 
+        jTxtYMin.setText("-3.0");
+
         jLabel5.setText("Y maximum");
+
+        jTxtYMax.setText("3.0");
 
         jBtnRedessiner.setText("Redéssiner");
         jBtnRedessiner.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +81,8 @@ public class GuiGraph extends javax.swing.JFrame {
         });
 
         jLabel6.setText("Pas");
+
+        jTxtPas.setText("0.1");
 
         javax.swing.GroupLayout jPanelControlsLayout = new javax.swing.GroupLayout(jPanelControls);
         jPanelControls.setLayout(jPanelControlsLayout);
@@ -81,7 +96,7 @@ public class GuiGraph extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTxtXMin1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTxtXMax, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -106,7 +121,7 @@ public class GuiGraph extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jTxtXMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jTxtXMin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtXMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(jTxtYMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
@@ -165,9 +180,47 @@ public class GuiGraph extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnRedessinerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRedessinerActionPerformed
-        // TODO add your handling code here:
+        plot();
     }//GEN-LAST:event_jBtnRedessinerActionPerformed
 
+    
+    private void plot(){
+        double xMin, xMax, yMin, yMax, pas;
+        int N = 0;
+        DecimalFormat decim = new DecimalFormat("0.00");
+        
+        xMin = Double.parseDouble(jTxtXMin.getText());
+        xMax = Double.parseDouble(jTxtXMax.getText());
+        yMin = Double.parseDouble(jTxtYMin.getText());
+        yMax = Double.parseDouble(jTxtYMax.getText());
+        pas = Double.parseDouble(jTxtPas.getText());
+        
+        for (double i = xMin; i <= xMax; i+=pas){
+            N++;
+        }
+
+        // the function y = sin(4x) + sin(20x), sampled at N points
+        // between x = 0 and x = pi
+        double[] x = new double[N+1];
+        double[] y = new double[N+1];
+        double cur_X = xMin;
+        for (int i = 0; i <= N; i++) {
+            x[i] = cur_X;
+            y[i] = Parser.calc_var(m_e, cur_X);
+            
+            cur_X += pas;
+        }
+
+           
+        // rescale the coordinate system
+        StdDraw.setXscale(xMin, xMax);
+        StdDraw.setYscale(yMin, yMax);
+
+        // plot the approximation to the function
+        for (int i = 0; i < N; i++) {
+            StdDraw.line(x[i], y[i], x[i+1], y[i+1]);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -216,8 +269,8 @@ public class GuiGraph extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelControls;
     private javax.swing.JTextField jTxtFct;
     private javax.swing.JTextField jTxtPas;
+    private javax.swing.JTextField jTxtXMax;
     private javax.swing.JTextField jTxtXMin;
-    private javax.swing.JTextField jTxtXMin1;
     private javax.swing.JTextField jTxtYMax;
     private javax.swing.JTextField jTxtYMin;
     // End of variables declaration//GEN-END:variables
