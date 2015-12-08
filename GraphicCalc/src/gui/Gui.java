@@ -523,7 +523,12 @@ public class Gui extends javax.swing.JFrame {
         
         EXPR e = Parser.read_e();
         
-        txt_expression.setText( String.valueOf(e.eval()) );
+        if (Parser.with_var) {
+            new Graph(e).setVisible(true);
+        }
+        else {
+            txt_expression.setText( String.valueOf(e.eval()) );
+        }
     }//GEN-LAST:event_btn_equalActionPerformed
 
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
