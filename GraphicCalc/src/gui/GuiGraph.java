@@ -87,7 +87,7 @@ public class GuiGraph extends javax.swing.JFrame {
 
         jTxtYMax.setText("3.0");
 
-        jBtnRedessiner.setText("(Re)déssiner");
+        jBtnRedessiner.setText("(Re)dessiner");
         jBtnRedessiner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnRedessinerActionPerformed(evt);

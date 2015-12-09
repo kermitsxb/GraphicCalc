@@ -177,7 +177,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="jBtnRedessiner">
           <Properties>
-            <Property name="text" type="java.lang.String" value="(Re)d&#xe9;ssiner"/>
+            <Property name="text" type="java.lang.String" value="(Re)dessiner"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnRedessinerActionPerformed"/>
