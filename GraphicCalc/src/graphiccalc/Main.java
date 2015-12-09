@@ -11,7 +11,7 @@ import gui.Gui;
  *
  * @author Thomas Stocker - Anthony Den Drijver
  */
-public class GraphicCalc {
+public class Main {
 
     /**
      * @param args the command line arguments
