@@ -19,6 +19,7 @@ import java.util.HashSet;
 public class GuiGraph extends javax.swing.JFrame {
 
     private EXPR m_e;
+    private String f;
     /**
      * Creates new form Graph
      */
@@ -29,6 +30,13 @@ public class GuiGraph extends javax.swing.JFrame {
     public GuiGraph(EXPR e) {
         initComponents();
         m_e = e;
+    }
+    
+    public GuiGraph(EXPR e, String ex) {
+        initComponents();
+        m_e = e;
+        f = ex;
+        jTxtFct.setText(f);
     }
 
     /**

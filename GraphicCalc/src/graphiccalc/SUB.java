@@ -23,6 +23,6 @@ public class SUB extends OPBINARY {
     
     @Override
     public double eval(double x) {
-        return left.eval() - right.eval();
+        return left.eval(x) - right.eval(x);
     }
 }

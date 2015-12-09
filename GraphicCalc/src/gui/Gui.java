@@ -524,7 +524,7 @@ public class Gui extends javax.swing.JFrame {
         EXPR e = Parser.read_e();
         
         //if (Parser.with_var) {
-            new GuiGraph(e).setVisible(true);
+            new GuiGraph(e, expr).setVisible(true);
         //}
         //else {
             //txt_expression.setText( String.valueOf(e.eval()) );

@@ -21,6 +21,6 @@ public class TAN extends OPUNARY{
     
     @Override
     public double eval(double x) {
-        return Math.round(Math.tan(right.eval()));
+        return Math.round(Math.tan(right.eval(x)));
     }
 }

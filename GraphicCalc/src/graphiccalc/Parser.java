@@ -14,7 +14,6 @@ public class Parser {
     public static String fnc;
     public static char[] authorized_char = new char[]{'+', '-', '*', '/', '(', ')', '.', 'x', 'π', '^'};
     public static String[] authorized_func = new String[]{"sin", "cos", "tan", "log", "ln"};
-    public static boolean with_var = false;
     
     /**
     * Réinitialise les données du parser
@@ -24,7 +23,6 @@ public class Parser {
         fnc = "";
         last_char = '\u0000';
         cur = 0;
-        with_var = false;
     }
     
     /**
@@ -242,7 +240,6 @@ public class Parser {
         else if (read_char('x')) {
             // -- C'est une variable
             result = new VAR();
-            with_var = true;
         }
         else if (read_char('π')) {
             result = new PI();

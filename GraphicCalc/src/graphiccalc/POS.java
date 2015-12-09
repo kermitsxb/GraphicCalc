@@ -21,6 +21,6 @@ public class POS extends OPUNARY {
     
     @Override
     public double eval(double x) {
-        return right.eval();
+        return right.eval(x);
     }
 }

@@ -23,7 +23,7 @@ public class EXP extends OPBINARY {
     
     @Override
     public double eval(double x) {
-        return Math.pow(left.eval(), right.eval());
+        return Math.pow(left.eval(x), right.eval(x));
     }
     
 }

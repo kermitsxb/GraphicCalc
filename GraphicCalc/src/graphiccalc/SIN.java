@@ -11,11 +11,11 @@ public class SIN extends OPUNARY{
     
     @Override
     public double eval() {
-        return Math.round(Math.sin(right.eval()));
+        return Math.sin(right.eval());
     }
     
     @Override
     public double eval(double x) {
-        return Math.round(Math.sin(right.eval()));
+        return Math.sin(right.eval(x));
     }
 }
