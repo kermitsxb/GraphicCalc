@@ -254,17 +254,19 @@ public class GuiGraph extends javax.swing.JFrame {
         StdDraw.line(xMin, 0, xMax, 0);
         StdDraw.line(0, yMin, 0, yMax);
         
-        for (double i = xMin; i <= xMax; i += 0.50){
+        double grad = Double.parseDouble(jTxtGrad.getText());
+        
+        for (double i = xMin; i <= xMax; i += grad){
             StdDraw.line(i, -0.1, i, 0.1);
         }
         
-        for (double i = yMin; i <= yMax; i += 0.50){
+        for (double i = yMin; i <= yMax; i += grad){
             StdDraw.line(-0.1, i, 0.1, i);
         }
         
         
         
-        
+        StdDraw.setTitle("Graphique        y = " + jTxtFct.getText());
         StdDraw.setPenColor(Color.blue);
         //StdDraw.setPenColor(Color.yellow);
         StdDraw.setPenRadius(0.003);
