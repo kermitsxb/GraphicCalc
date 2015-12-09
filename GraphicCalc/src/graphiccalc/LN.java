@@ -16,12 +16,12 @@ public class LN extends OPUNARY {
     
     @Override
     public double eval() {
-        return Math.round(Math.log(right.eval()));
+        return Math.log(right.eval());
     }
     
     @Override
     public double eval(double x) {
-        return Math.round(Math.log(right.eval(x)));
+        return Math.log(right.eval(x));
     }
     
 }

@@ -60,6 +60,7 @@ public class Gui extends javax.swing.JFrame {
         btn_ln = new javax.swing.JButton();
         btn_pi = new javax.swing.JButton();
         btn_exp = new javax.swing.JButton();
+        btn_var = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -303,6 +304,14 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_var.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btn_var.setText("X");
+        btn_var.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_varActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -345,7 +354,10 @@ public class Gui extends javax.swing.JFrame {
                                     .addComponent(btn_point, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btn_plus, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(btn_plus, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_var, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(btn_div, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -403,7 +415,8 @@ public class Gui extends javax.swing.JFrame {
                             .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_plus, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_plus, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_var, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton0, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -523,12 +536,12 @@ public class Gui extends javax.swing.JFrame {
         
         EXPR e = Parser.read_e();
         
-        //if (Parser.with_var) {
+        if (Parser.with_var) {
             new GuiGraph(e, expr).setVisible(true);
-        //}
-        //else {
-            //txt_expression.setText( String.valueOf(e.eval()) );
-        //}
+        }
+        else {
+            txt_expression.setText( String.valueOf(e.eval()) );
+        }
     }//GEN-LAST:event_btn_equalActionPerformed
 
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
@@ -623,6 +636,10 @@ public class Gui extends javax.swing.JFrame {
         addToInput("^");
     }//GEN-LAST:event_btn_expActionPerformed
 
+    private void btn_varActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_varActionPerformed
+        addToInput("x");
+    }//GEN-LAST:event_btn_varActionPerformed
+
     
     
     private void addToInput(String text) { 
@@ -683,6 +700,7 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JButton btn_ret;
     private javax.swing.JButton btn_sin;
     private javax.swing.JButton btn_tan;
+    private javax.swing.JButton btn_var;
     private javax.swing.JButton jButton0;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

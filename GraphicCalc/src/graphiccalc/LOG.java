@@ -11,11 +11,11 @@ public class LOG extends OPUNARY {
     
     @Override
     public double eval() {
-        return Math.round(Math.log(right.eval()) / Math.log(10));
+        return Math.log(right.eval()) / Math.log(10);
     }
     
     @Override
     public double eval(double x) {
-        return Math.round(Math.log(right.eval(x)) / Math.log(10));
+        return Math.log(right.eval(x)) / Math.log(10);
     }
 }

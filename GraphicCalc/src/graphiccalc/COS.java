@@ -16,11 +16,11 @@ public class COS extends OPUNARY{
     
     @Override
     public double eval() {
-        return Math.round(Math.cos(right.eval()));
+        return Math.cos(right.eval());
     }
     
     @Override
     public double eval(double x) {
-        return Math.round(Math.cos(right.eval(x)));
+        return Math.cos(right.eval(x));
     }
 }
