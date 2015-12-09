@@ -1,6 +1,7 @@
 package graphiccalc;
 
 import java.util.Arrays;
+import javax.swing.JOptionPane;
 
 /**
  * Classe Parser pour le traitement d'une expression arithmétique
@@ -323,13 +324,12 @@ public class Parser {
      * Affichage en cas d'erreur avec la position n'ayant pas été reconnue par le Parser
      */
     public static void show_error() {
-        int i;
-        System.err.println(str);
-        for (i = 0; i < cur; i++) {
-            System.err.print(" ");
-        }
-        System.err.println("^");
+        String message = str + "\n";
+        message += "L'expression contient une erreur ou un caractère interdit.\nLe programme va s'arrêter.";
+        
+        JOptionPane.showMessageDialog(null, message, "Erreur", JOptionPane.ERROR_MESSAGE);
+        
         System.exit(1);
     }
-
+    
 }
