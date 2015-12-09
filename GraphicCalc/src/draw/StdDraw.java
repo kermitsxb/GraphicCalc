@@ -34,23 +34,28 @@ import java.awt.image.DirectColorModel;
 import java.awt.image.WritableRaster;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 
 import java.net.URL;
+import java.util.HashSet;
 
 import java.util.LinkedList;
 import java.util.TreeSet;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 import javax.imageio.ImageIO;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
+import javax.swing.filechooser.FileFilter;
 
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
@@ -1174,11 +1179,17 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-        FileDialog chooser = new FileDialog(StdDraw.frame, "Use a .png or .jpg extension", FileDialog.SAVE);
-        chooser.setVisible(true);
-        String filename = chooser.getFile();
-        if (filename != null) {
-            StdDraw.save(chooser.getDirectory() + File.separator + chooser.getFile());
+        File myFilename = new File("graph.png");
+        JFileChooser chooser = new JFileChooser();
+        chooser.setFileFilter(new OpenFileFilter("png","Format PNG"));
+        chooser.addChoosableFileFilter(new OpenFileFilter("jpg","Format JPG") );
+        chooser.setSelectedFile(myFilename);
+        int returnVal = chooser.showSaveDialog(frame);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+             myFilename = chooser.getSelectedFile();
+             if (myFilename.toString() != null) {
+                StdDraw.save(myFilename.toString() );
+            }
         }
     }
 
@@ -1370,4 +1381,31 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         }
     }
 
+}
+
+class OpenFileFilter extends FileFilter {
+
+    String description = "";
+    String fileExt = "";
+
+    public OpenFileFilter(String extension) {
+        fileExt = extension;
+    }
+
+    public OpenFileFilter(String extension, String typeDescription) {
+        fileExt = extension;
+        this.description = typeDescription;
+    }
+
+    @Override
+    public boolean accept(File f) {
+        if (f.isDirectory())
+            return true;
+        return (f.getName().toLowerCase().endsWith(fileExt));
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
 }
