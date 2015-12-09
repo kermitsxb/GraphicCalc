@@ -11,6 +11,7 @@ import graphiccalc.Parser;
 import java.awt.Color;
 import java.text.DecimalFormat;
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -213,15 +214,31 @@ public class GuiGraph extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnRedessinerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRedessinerActionPerformed
-        plot();
+        double xMin, xMax, yMin, yMax, pas, grad;
+        xMin = Double.parseDouble(jTxtXMin.getText());
+        xMax = Double.parseDouble(jTxtXMax.getText());
+        yMin = Double.parseDouble(jTxtYMin.getText());
+        yMax = Double.parseDouble(jTxtYMax.getText());
+        pas = Double.parseDouble(jTxtPas.getText());
+        grad = Double.parseDouble(jTxtGrad.getText());
+        
+        if (xMin > xMax){
+            JOptionPane.showMessageDialog(null, "Dessin du graph impossible ! xMin est inférieur à xMax", "Erreur", JOptionPane.ERROR_MESSAGE);
+        }else if(yMin > yMax){
+            JOptionPane.showMessageDialog(null, "Dessin du graph impossible ! yMin est inférieur à yMax", "Erreur", JOptionPane.ERROR_MESSAGE);
+        }else if(grad < pas){        
+            JOptionPane.showMessageDialog(null, "Dessin du graph impossible ! Grad est inférieur à Pas", "Erreur", JOptionPane.ERROR_MESSAGE);
+        } else {
+            plot();
+        }
     }//GEN-LAST:event_jBtnRedessinerActionPerformed
 
     
     private void plot(){
-        double xMin, xMax, yMin, yMax, pas;
+        double xMin, xMax, yMin, yMax, pas, grad;
         int N = 0;
         DecimalFormat decim = new DecimalFormat("0.00");
-        
+        grad = Double.parseDouble(jTxtGrad.getText());
         xMin = Double.parseDouble(jTxtXMin.getText());
         xMax = Double.parseDouble(jTxtXMax.getText());
         yMin = Double.parseDouble(jTxtYMin.getText());
@@ -254,7 +271,6 @@ public class GuiGraph extends javax.swing.JFrame {
         StdDraw.line(xMin, 0, xMax, 0);
         StdDraw.line(0, yMin, 0, yMax);
         
-        double grad = Double.parseDouble(jTxtGrad.getText());
         
         for (double i = xMin; i <= xMax; i += grad){
             StdDraw.line(i, -0.1, i, 0.1);

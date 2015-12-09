@@ -8,7 +8,7 @@ import graphiccalc.Parser;
  * @author Anthony Den Drijver - Thomas Stocker
  */
 public class Gui extends javax.swing.JFrame {
-
+    private GuiGraph g;
     /**
      * Créer l'interface graphique principal de la calculatrice
      */
@@ -680,14 +680,17 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_varActionPerformed
 
     private void btn_graphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_graphActionPerformed
-        String expr = txt_expression.getText();
-        
-        Parser.init();
-        Parser.str = expr;
-        
-        EXPR e = Parser.read_e();
-        
-        new GuiGraph(e, expr).setVisible(true);
+        if (g == null || !g.isVisible()){
+            String expr = txt_expression.getText();
+
+            Parser.init();
+            Parser.str = expr;
+
+            EXPR e = Parser.read_e();
+
+            g = new GuiGraph(e, expr);
+            g.setVisible(true);
+        }
     }//GEN-LAST:event_btn_graphActionPerformed
 
     
