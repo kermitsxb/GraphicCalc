@@ -89,6 +89,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(java.awt.Color.white);
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton2.setText("2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +98,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(java.awt.Color.white);
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton3.setText("3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +107,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(java.awt.Color.white);
         jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton4.setText("4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +116,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(java.awt.Color.white);
         jButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +125,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setBackground(java.awt.Color.white);
         jButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +134,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(java.awt.Color.white);
         jButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton7.setText("7");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +143,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton8.setBackground(java.awt.Color.white);
         jButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton8.setText("8");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +152,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setBackground(java.awt.Color.white);
         jButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton9.setText("9");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +169,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(java.awt.Color.white);
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -185,6 +194,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        jButton0.setBackground(java.awt.Color.white);
         jButton0.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jButton0.setText("0");
         jButton0.addActionListener(new java.awt.event.ActionListener() {
@@ -217,6 +227,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_equal.setBackground(javax.swing.UIManager.getDefaults().getColor("ComboBox.selectionBackground"));
         btn_equal.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_equal.setText("=");
         btn_equal.addActionListener(new java.awt.event.ActionListener() {
@@ -265,6 +276,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_point.setBackground(java.awt.Color.white);
         btn_point.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_point.setText(".");
         btn_point.addActionListener(new java.awt.event.ActionListener() {
