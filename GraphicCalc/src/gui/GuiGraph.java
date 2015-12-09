@@ -64,7 +64,7 @@ public class GuiGraph extends javax.swing.JFrame {
         jTxtFct = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Générateur de graphe");
 
         jLabel2.setText("X minimum");
@@ -241,7 +241,7 @@ public class GuiGraph extends javax.swing.JFrame {
             StdDraw.line(x[i], y[i], x[i+1], y[i+1]);
         }
         
-        
+        StdDraw.getJFrame().setVisible(true);
     }
     /**
      * @param args the command line arguments

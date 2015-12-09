@@ -221,6 +221,10 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     public static void setCanvasSize() {
         setCanvasSize(DEFAULT_SIZE, DEFAULT_SIZE);
     }
+    
+    public static JFrame getJFrame(){
+        return frame;
+    }
 
     /**
      * Sets the canvas (drawing area) to be <em>width</em>-by-<em>height</em> pixels.
@@ -274,13 +278,13 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         frame.setContentPane(draw);
         frame.addKeyListener(std);    // JLabel cannot get keyboard focus
         frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            // closes all windows
-        // frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);      // closes only current window
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            // closes all windows
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);      // closes only current window
         frame.setTitle("Standard Draw");
         frame.setJMenuBar(createMenuBar());
         frame.pack();
         frame.requestFocusInWindow();
-        frame.setVisible(true);
+        //frame.setVisible(true);
     }
 
     // create the menu bar (changed to private)
