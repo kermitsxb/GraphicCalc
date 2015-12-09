@@ -569,17 +569,18 @@ public class Gui extends javax.swing.JFrame {
 
     private void btn_equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_equalActionPerformed
         String expr = txt_expression.getText();
-        
-        Parser.init();
-        Parser.str = expr;
-        
-        EXPR e = Parser.read_e();
-        
-        if (Parser.with_var) {
-            new GuiGraph(e, expr).setVisible(true);
-        }
-        else {
-            txt_expression.setText( String.valueOf(e.eval()) );
+        if (!expr.equals("")) {
+            Parser.init();
+            Parser.str = expr;
+
+            EXPR e = Parser.read_e();
+
+            if (Parser.with_var) {
+                new GuiGraph(e, expr).setVisible(true);
+            }
+            else {
+                txt_expression.setText( String.valueOf(e.eval()) );
+            }
         }
     }//GEN-LAST:event_btn_equalActionPerformed
 
@@ -682,14 +683,15 @@ public class Gui extends javax.swing.JFrame {
     private void btn_graphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_graphActionPerformed
         if (g == null || !g.isVisible()){
             String expr = txt_expression.getText();
+            if (!expr.equals("")) {
+                Parser.init();
+                Parser.str = expr;
 
-            Parser.init();
-            Parser.str = expr;
+                EXPR e = Parser.read_e();
 
-            EXPR e = Parser.read_e();
-
-            g = new GuiGraph(e, expr);
-            g.setVisible(true);
+                g = new GuiGraph(e, expr);
+                g.setVisible(true);
+            }
         }
     }//GEN-LAST:event_btn_graphActionPerformed
 
