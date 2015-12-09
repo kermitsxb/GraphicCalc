@@ -161,6 +161,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_div.setBackground(new java.awt.Color(119, 189, 95));
         btn_div.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_div.setText("/");
         btn_div.addActionListener(new java.awt.event.ActionListener() {
@@ -203,6 +204,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_moins.setBackground(new java.awt.Color(119, 189, 95));
         btn_moins.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_moins.setText("-");
         btn_moins.addActionListener(new java.awt.event.ActionListener() {
@@ -211,6 +213,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_cos.setBackground(new java.awt.Color(104, 178, 252));
         btn_cos.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_cos.setText("cos");
         btn_cos.addActionListener(new java.awt.event.ActionListener() {
@@ -219,6 +222,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_plus.setBackground(new java.awt.Color(119, 189, 95));
         btn_plus.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_plus.setText("+");
         btn_plus.addActionListener(new java.awt.event.ActionListener() {
@@ -227,7 +231,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
-        btn_equal.setBackground(javax.swing.UIManager.getDefaults().getColor("ComboBox.selectionBackground"));
+        btn_equal.setBackground(javax.swing.UIManager.getDefaults().getColor("EditorPane.selectionBackground"));
         btn_equal.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_equal.setText("=");
         btn_equal.addActionListener(new java.awt.event.ActionListener() {
@@ -236,6 +240,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_mul.setBackground(new java.awt.Color(119, 189, 95));
         btn_mul.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_mul.setText("*");
         btn_mul.addActionListener(new java.awt.event.ActionListener() {
@@ -244,6 +249,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_sin.setBackground(new java.awt.Color(104, 178, 252));
         btn_sin.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_sin.setText("sin");
         btn_sin.addActionListener(new java.awt.event.ActionListener() {
@@ -252,6 +258,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_tan.setBackground(new java.awt.Color(104, 178, 252));
         btn_tan.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_tan.setText("tan");
         btn_tan.addActionListener(new java.awt.event.ActionListener() {
@@ -285,6 +292,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_log.setBackground(new java.awt.Color(104, 178, 252));
         btn_log.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_log.setText("log");
         btn_log.addActionListener(new java.awt.event.ActionListener() {
@@ -293,6 +301,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_ln.setBackground(new java.awt.Color(104, 178, 252));
         btn_ln.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_ln.setText("ln");
         btn_ln.addActionListener(new java.awt.event.ActionListener() {
@@ -301,6 +310,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_pi.setBackground(new java.awt.Color(119, 189, 95));
         btn_pi.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_pi.setText("Pi");
         btn_pi.addActionListener(new java.awt.event.ActionListener() {
@@ -309,6 +319,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_exp.setBackground(new java.awt.Color(119, 189, 95));
         btn_exp.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_exp.setText("^");
         btn_exp.addActionListener(new java.awt.event.ActionListener() {
@@ -317,6 +328,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_var.setBackground(new java.awt.Color(119, 189, 95));
         btn_var.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_var.setText("X");
         btn_var.addActionListener(new java.awt.event.ActionListener() {

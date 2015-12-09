@@ -397,6 +397,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_div">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -458,6 +461,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_moins">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -469,6 +475,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_cos">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="fc" green="b2" red="68" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -480,6 +489,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_plus">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -492,7 +504,7 @@
             <Component class="javax.swing.JButton" name="btn_equal">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" id="ComboBox.selectionBackground" palette="3" red="33" type="palette"/>
+                  <Color blue="ff" green="99" id="EditorPane.selectionBackground" palette="3" red="33" type="palette"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
@@ -505,6 +517,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_mul">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -516,6 +531,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_sin">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="fc" green="b2" red="68" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -527,6 +545,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_tan">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="fc" green="b2" red="68" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -574,6 +595,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_log">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="fc" green="b2" red="68" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -585,6 +609,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_ln">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="fc" green="b2" red="68" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -596,6 +623,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_pi">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -607,6 +637,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_exp">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
@@ -618,6 +651,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_var">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="5f" green="bd" red="77" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="0"/>
                 </Property>
