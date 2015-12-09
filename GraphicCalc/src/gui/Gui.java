@@ -81,6 +81,7 @@ public class Gui extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        btn_ret.setBackground(new java.awt.Color(216, 158, 100));
         btn_ret.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_ret.setText("R");
         btn_ret.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +180,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_ce.setBackground(new java.awt.Color(216, 158, 100));
         btn_ce.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_ce.setText("CE");
         btn_ce.addActionListener(new java.awt.event.ActionListener() {
@@ -187,6 +189,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_c.setBackground(new java.awt.Color(216, 158, 100));
         btn_c.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_c.setText("C");
         btn_c.addActionListener(new java.awt.event.ActionListener() {
@@ -267,6 +270,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_pOpen.setBackground(new java.awt.Color(216, 158, 100));
         btn_pOpen.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_pOpen.setText("(");
         btn_pOpen.addActionListener(new java.awt.event.ActionListener() {
@@ -275,6 +279,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_pClose.setBackground(new java.awt.Color(216, 158, 100));
         btn_pClose.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_pClose.setText(")");
         btn_pClose.addActionListener(new java.awt.event.ActionListener() {
@@ -337,6 +342,7 @@ public class Gui extends javax.swing.JFrame {
             }
         });
 
+        btn_graph.setBackground(new java.awt.Color(220, 70, 70));
         btn_graph.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btn_graph.setText("Graph");
         btn_graph.addActionListener(new java.awt.event.ActionListener() {
