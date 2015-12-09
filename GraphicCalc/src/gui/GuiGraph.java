@@ -8,7 +8,9 @@ package gui;
 import graphiccalc.EXPR;
 import draw.StdDraw;
 import graphiccalc.Parser;
+import java.awt.Color;
 import java.text.DecimalFormat;
+import java.util.HashSet;
 
 /**
  *
@@ -210,16 +212,28 @@ public class GuiGraph extends javax.swing.JFrame {
             
             cur_X += pas;
         }
+        
+        
 
            
         // rescale the coordinate system
         StdDraw.setXscale(xMin, xMax);
         StdDraw.setYscale(yMin, yMax);
+        
+        StdDraw.line(xMin, 0, xMax, 0);
+        StdDraw.line(0, yMin, 0, yMax);
+        
+        
+        StdDraw.setPenColor(Color.blue);
+        //StdDraw.setPenColor(Color.yellow);
+        StdDraw.setPenRadius(0.003);
 
         // plot the approximation to the function
         for (int i = 0; i < N; i++) {
             StdDraw.line(x[i], y[i], x[i+1], y[i+1]);
         }
+        
+        
     }
     /**
      * @param args the command line arguments
