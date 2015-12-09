@@ -223,18 +223,30 @@ public class GuiGraph extends javax.swing.JFrame {
         
         
 
-           
+        StdDraw.init();
         // rescale the coordinate system
         StdDraw.setXscale(xMin, xMax);
         StdDraw.setYscale(yMin, yMax);
-        
+        StdDraw.setPenColor(Color.black);
         StdDraw.line(xMin, 0, xMax, 0);
         StdDraw.line(0, yMin, 0, yMax);
+        
+        for (double i = xMin; i <= xMax; i += 0.50){
+            StdDraw.line(i, -0.1, i, 0.1);
+        }
+        
+        for (double i = yMin; i <= yMax; i += 0.50){
+            StdDraw.line(-0.1, i, 0.1, i);
+        }
+        
+        
         
         
         StdDraw.setPenColor(Color.blue);
         //StdDraw.setPenColor(Color.yellow);
         StdDraw.setPenRadius(0.003);
+        
+        
 
         // plot the approximation to the function
         for (int i = 0; i < N; i++) {

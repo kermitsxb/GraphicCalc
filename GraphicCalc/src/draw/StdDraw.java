@@ -246,7 +246,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
     // init
-    private static void init() {
+    public static void init() {
         if (frame != null) frame.setVisible(false);
         frame = new JFrame();
         offscreenImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
@@ -290,9 +290,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     // create the menu bar (changed to private)
     private static JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar();
-        JMenu menu = new JMenu("File");
+        JMenu menu = new JMenu("Fichier");
         menuBar.add(menu);
-        JMenuItem menuItem1 = new JMenuItem(" Save...   ");
+        JMenuItem menuItem1 = new JMenuItem(" Enregistrer...   ");
         menuItem1.addActionListener(std);
         menuItem1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
                                 Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
